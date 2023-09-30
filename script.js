@@ -70,29 +70,45 @@
 // console.log(x);
 
 
-//hypotenuse practise program
-let a;
-let b;
-let c;
+// //hypotenuse practise program
+// let a;
+// let b;
+// let c;
 
-// a = window.prompt("Enter side A");
-// a = Number(a);
+// document.getElementById("submitButton").onclick = function(){
+//     a = document.getElementById("aTextBox").value;
+//     a = Number(a);
 
-// b = window.prompt("Enter side B");
-// b = Number(b)
+//     b = document.getElementById("bTextBox").value;
+//     b = Number(b)
 
-// c = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+//     c = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
 
-// console.log("side C:",Math.round(c));
+//     document.getElementById("cLabel").innerHTML = "Side C: " + c;
+// }
 
-document.getElementById("submitButton").onclick = function(){
-    a = document.getElementById("aTextBox").value;
-    a = Number(a);
+// html
+/* <Label id="aLabel">Side A:</Label><br>
+   <input type="text" id="aTextBox"><br>
+   <Label id="bLabel">Side B:</Label><br>
+   <input type="text" id="bTextBox"><br>
+   <button type="button" id="submitButton">submit</button><br>
+   <Label id="cLabel"></Label><br></br> */
 
-    b = document.getElementById("bTextBox").value;
-    b = Number(b)
 
-    c = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
 
-    document.getElementById("cLabel").innerHTML = "Side C: " + c;
+// counter program
+let count = 0;
+
+document.getElementById("decreaseBtn").onclick = function(){
+    count -= 1;
+    document.getElementById("countLabel").innerHTML = count;
+}
+document.getElementById("resetBtn").onclick = function(){
+    count = 0;
+    document.getElementById("countLabel").innerHTML = count;
+}
+document.getElementById("increaseBtn").onclick = function(){
+    count += 1;
+    document.getElementById("countLabel").innerHTML = count;
 }
